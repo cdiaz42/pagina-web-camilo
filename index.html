@@ -1,0 +1,2881 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camilo Andrés Díaz · Publicidad y Marketing Digital</title>
+  <meta name="description" content="Camilo Andrés Díaz — Estudiante de Publicidad y Marketing Digital, apasionado por la creatividad, la comunicación y las nuevas ideas. Branding, campañas, contenido y marketing digital.">
+  <meta name="theme-color" content="#F5F0E8">
+
+  <!-- Tipografías editoriales -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <style>
+    /* =====================================================================
+       CAMILO ANDRÉS DÍAZ · PORTAFOLIO EDITORIAL DE PUBLICIDAD & MARKETING
+       Base: Alabastro cálido + Obsidiana + Bermellón + Dorado Champaña
+       Forma: Cápsula flotante, arco escultórico, Bento asimétrico y cortes editoriales
+       Fondo: Matriz arquitectónica de puntos + curvas topográficas + grano sutil
+       ===================================================================== */
+
+    :root {
+      /* Base y superficies */
+      --papel: #F5F0E8;
+      --arena: #EAE2D5;
+      --marfil: #FDFBF7;
+      --estudio: #DDD5C8;
+      --obsidiana: #111111;
+      --carbon: #1B1B1D;
+      --grafito: #27272A;
+
+      /* Acentos inspirados en el retrato editorial */
+      --rojo: #DC3226;
+      --rojo-oscuro: #B92319;
+      --dorado: #C59648;
+      --dorado-suave: rgba(197, 150, 72, 0.16);
+
+      /* Tipografía y bordes */
+      --tinta: #141414;
+      --tinta-suave: #55524C;
+      --tinta-clara: #F6F2EB;
+      --tinta-clara-suave: #B5AFA5;
+      --borde: rgba(20, 20, 20, 0.11);
+      --borde-oscuro: rgba(255, 255, 255, 0.11);
+
+      /* Fuentes */
+      --f-display: 'Syne', system-ui, -apple-system, sans-serif;
+      --f-editorial: 'Instrument Serif', Georgia, serif;
+      --f-cuerpo: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+      /* Geometría y medidas */
+      --radio-sm: 0.875rem;
+      --radio-md: 1.5rem;
+      --radio-lg: 2.25rem;
+      --radio-pill: 999px;
+      --ancho: 76rem;
+      --margen: clamp(1.1rem, 4vw, 2.25rem);
+      --sombra-suave: 0 20px 50px -24px rgba(17, 17, 17, 0.16);
+      --sombra-fuerte: 0 28px 70px -24px rgba(17, 17, 17, 0.32);
+      --trans: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 6rem;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      margin: 0;
+      background-color: var(--papel);
+      color: var(--tinta);
+      font-family: var(--f-cuerpo);
+      font-size: 1rem;
+      line-height: 1.65;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg, canvas { max-width: 100%; display: block; }
+    h1, h2, h3, h4 {
+      font-family: var(--f-display);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      margin: 0;
+      text-wrap: balance;
+    }
+    p { margin: 0; }
+    ul, ol { margin: 0; padding: 0; list-style: none; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    button { cursor: pointer; }
+    :focus-visible { outline: 3px solid var(--rojo); outline-offset: 3px; border-radius: 6px; }
+
+    .solo-lector {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+    }
+    .saltar {
+      position: fixed; left: 1rem; top: -5rem; z-index: 200;
+      background: var(--obsidiana); color: var(--tinta-clara);
+      padding: 0.7rem 1.25rem; border-radius: var(--radio-pill);
+      font-weight: 700; text-decoration: none; transition: top 0.2s;
+    }
+    .saltar:focus { top: 1rem; }
+
+    /* ---------- Fondo arquitectónico editorial ---------- */
+    .fondo-editorial {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background-color: var(--papel);
+      background-image:
+        radial-gradient(rgba(17, 17, 17, 0.085) 1px, transparent 1px),
+        radial-gradient(56rem 42rem at 92% 6%, rgba(220, 50, 38, 0.07), transparent 62%),
+        radial-gradient(48rem 38rem at 6% 88%, rgba(197, 150, 72, 0.12), transparent 60%);
+      background-size: 28px 28px, 100% 100%, 100% 100%;
+    }
+    .fondo-curvas {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.45;
+    }
+    .fondo-curvas svg { width: 100%; height: 100%; }
+
+    /* Barra de progreso superior */
+    .progreso {
+      position: fixed; top: 0; left: 0; height: 3px; width: 100%;
+      z-index: 120;
+      background: linear-gradient(90deg, var(--rojo), var(--dorado));
+      transform-origin: left;
+      transform: scaleX(var(--scroll, 0));
+    }
+
+    /* ---------- Contenedores y elementos comunes ---------- */
+    .contenedor {
+      width: min(100% - 2 * var(--margen), var(--ancho));
+      margin-inline: auto;
+    }
+    .seccion { padding-block: clamp(4.25rem, 8.5vw, 7.5rem); position: relative; }
+
+    .serif-accent {
+      font-family: var(--f-editorial);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: var(--rojo);
+    }
+    .serif-accent-gold {
+      font-family: var(--f-editorial);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: var(--dorado);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--tinta-suave);
+      margin-bottom: 1.1rem;
+    }
+    .kicker-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--rojo);
+      display: inline-block;
+      box-shadow: 0 0 0 4px rgba(220, 50, 38, 0.16);
+    }
+
+    .encabezado-seccion {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem 2.5rem;
+      margin-bottom: clamp(2.25rem, 5vw, 3.75rem);
+    }
+    .encabezado-seccion h2 {
+      font-size: clamp(2.1rem, 4.8vw, 3.5rem);
+      max-width: 17ch;
+    }
+    .encabezado-seccion .lead {
+      max-width: 40ch;
+      color: var(--tinta-suave);
+      font-size: 1.03rem;
+    }
+
+    /* Botones */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.92rem 1.65rem;
+      border-radius: var(--radio-pill);
+      font-weight: 700;
+      font-size: 0.94rem;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      transition: transform var(--trans), background-color var(--trans), color var(--trans), border-color var(--trans), box-shadow var(--trans);
+      white-space: nowrap;
+    }
+    .btn svg { width: 1.05rem; height: 1.05rem; transition: transform var(--trans); }
+    .btn:hover svg { transform: translateX(4px); }
+    .btn:active { transform: scale(0.98); }
+
+    .btn-primario {
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      box-shadow: 0 12px 26px -12px rgba(17, 17, 17, 0.5);
+    }
+    .btn-primario:hover {
+      background: var(--rojo);
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px -14px rgba(220, 50, 38, 0.55);
+    }
+
+    .btn-rojo {
+      background: var(--rojo);
+      color: #fff;
+      box-shadow: 0 14px 30px -12px rgba(220, 50, 38, 0.55);
+    }
+    .btn-rojo:hover {
+      background: var(--rojo-oscuro);
+      transform: translateY(-2px);
+    }
+
+    .btn-secundario {
+      background: rgba(253, 251, 247, 0.78);
+      color: var(--tinta);
+      border-color: var(--borde);
+      backdrop-filter: blur(8px);
+    }
+    .btn-secundario:hover {
+      background: var(--marfil);
+      border-color: var(--obsidiana);
+      transform: translateY(-2px);
+    }
+
+    .btn-claro {
+      background: var(--marfil);
+      color: var(--obsidiana);
+    }
+    .btn-claro:hover {
+      background: var(--rojo);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn-sm { padding: 0.65rem 1.2rem; font-size: 0.86rem; }
+
+    /* Animaciones de entrada */
+    .js .rv {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .js .rv.visible { opacity: 1; transform: translateY(0); }
+
+    /* ---------- 1. NAVEGACIÓN CÁPSULA FLOTANTE ---------- */
+    .nav-wrap {
+      position: sticky;
+      top: 1rem;
+      z-index: 90;
+      padding-inline: var(--margen);
+      pointer-events: none;
+    }
+    .nav-pill {
+      pointer-events: auto;
+      max-width: var(--ancho);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.55rem 0.65rem 0.55rem 1.15rem;
+      background: rgba(253, 251, 247, 0.82);
+      border: 1px solid rgba(20, 20, 20, 0.1);
+      border-radius: var(--radio-pill);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 12px 32px -18px rgba(17, 17, 17, 0.2);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .nav-pill.elevada {
+      background: rgba(253, 251, 247, 0.94);
+      box-shadow: 0 18px 42px -18px rgba(17, 17, 17, 0.28);
+    }
+
+    .marca-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+      font-family: var(--f-display);
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .marca-monograma {
+      width: 2.2rem; height: 2.2rem;
+      border-radius: 50%;
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      display: grid; place-items: center;
+      font-size: 0.82rem;
+      font-weight: 800;
+      position: relative;
+      overflow: hidden;
+    }
+    .marca-monograma::after {
+      content: "";
+      position: absolute; right: 5px; bottom: 5px;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--rojo);
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--tinta-suave);
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radio-pill);
+      transition: color 0.25s, background-color 0.25s;
+    }
+    .nav-links a:hover, .nav-links a.activo {
+      color: var(--obsidiana);
+      background: rgba(17, 17, 17, 0.06);
+    }
+    .nav-links a.activo { font-weight: 700; }
+
+    .nav-acciones { display: flex; align-items: center; gap: 0.5rem; }
+    .nav-cta { display: none; }
+
+    .menu-toggle {
+      width: 2.6rem; height: 2.6rem;
+      border-radius: 50%;
+      border: 1px solid var(--borde);
+      background: var(--marfil);
+      display: grid; place-items: center;
+      padding: 0;
+    }
+    .menu-toggle span {
+      display: block; width: 16px; height: 2px;
+      background: var(--obsidiana);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .menu-toggle .barras { display: grid; gap: 4px; }
+    .menu-toggle[aria-expanded="true"] .barras span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] .barras span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded="true"] .barras span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    .menu-movil {
+      position: fixed;
+      inset: 5.5rem var(--margen) auto var(--margen);
+      z-index: 89;
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      border-radius: var(--radio-md);
+      padding: 1.25rem;
+      display: grid;
+      gap: 0.35rem;
+      box-shadow: var(--sombra-fuerte);
+      opacity: 0;
+      transform: translateY(-12px) scale(0.98);
+      pointer-events: none;
+      transition: opacity 0.28s, transform 0.28s;
+    }
+    .menu-movil.abierto { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+    .menu-movil a {
+      text-decoration: none;
+      padding: 0.85rem 1rem;
+      border-radius: 0.85rem;
+      font-weight: 600;
+      font-size: 1.02rem;
+    }
+    .menu-movil a:hover { background: rgba(255, 255, 255, 0.08); }
+    .menu-movil .btn { margin-top: 0.6rem; }
+
+    /* ---------- 2. HERO EDITORIAL ASIMÉTRICO ---------- */
+    .hero {
+      padding-top: clamp(2.25rem, 5vw, 4rem);
+      padding-bottom: clamp(3.5rem, 7vw, 6rem);
+    }
+    .hero-grid {
+      display: grid;
+      gap: clamp(2.5rem, 5vw, 4rem);
+      align-items: center;
+    }
+
+    .badge-disponible {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 1rem 0.45rem 0.7rem;
+      background: var(--marfil);
+      border: 1px solid var(--borde);
+      border-radius: var(--radio-pill);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--tinta);
+      margin-bottom: 1.4rem;
+      box-shadow: 0 8px 20px -14px rgba(17, 17, 17, 0.25);
+    }
+    .pulso {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: #16A34A;
+      position: relative;
+    }
+    .pulso::after {
+      content: ""; position: absolute; inset: -4px;
+      border-radius: 50%;
+      border: 2px solid rgba(22, 163, 74, 0.45);
+      animation: pulsar 2s ease-out infinite;
+    }
+    @keyframes pulsar { 0% { transform: scale(0.7); opacity: 1; } 100% { transform: scale(1.9); opacity: 0; } }
+
+    .hero-titulo {
+      font-size: clamp(2.8rem, 7.6vw, 5.4rem);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.15rem;
+    }
+    .hero-titulo .linea-suave {
+      display: block;
+      font-family: var(--f-editorial);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.08em;
+      color: var(--rojo);
+      letter-spacing: -0.01em;
+    }
+
+    .hero-rol-dinamico {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--obsidiana);
+      padding: 0.42rem 0.95rem;
+      border-radius: 0.6rem;
+      background: var(--arena);
+      margin-bottom: 1.35rem;
+    }
+    .hero-rol-dinamico .sep { color: var(--rojo); font-weight: 800; }
+
+    .hero-desc {
+      font-size: clamp(1.04rem, 1.5vw, 1.18rem);
+      color: var(--tinta-suave);
+      max-width: 48ch;
+      margin-bottom: 1.9rem;
+    }
+    .hero-desc strong { color: var(--tinta); font-weight: 700; }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-pilares {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed rgba(20, 20, 20, 0.18);
+    }
+    .chip-pilar {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.42rem 0.88rem;
+      border-radius: var(--radio-pill);
+      background: rgba(253, 251, 247, 0.72);
+      border: 1px solid var(--borde);
+      color: var(--tinta-suave);
+      transition: border-color 0.25s, color 0.25s, transform 0.25s;
+    }
+    .chip-pilar:hover {
+      border-color: var(--rojo);
+      color: var(--obsidiana);
+      transform: translateY(-2px);
+    }
+
+    /* Retrato escultórico en arco */
+    .hero-visual {
+      position: relative;
+      max-width: 28rem;
+      width: 100%;
+      margin-inline: auto;
+      padding: 0.85rem;
+    }
+    .arco-marco {
+      position: relative;
+      border-radius: 14rem 14rem 2rem 2rem;
+      overflow: hidden;
+      background: var(--estudio);
+      border: 2px solid var(--obsidiana);
+      box-shadow: 14px 14px 0 var(--obsidiana);
+      aspect-ratio: 4 / 5;
+      transform: translate3d(calc(var(--px, 0) * 6px), calc(var(--py, 0) * 6px), 0);
+      transition: transform 0.25s ease-out;
+    }
+    .arco-marco img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 12%;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .arco-marco:hover img { transform: scale(1.035); }
+    .arco-marco::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 68%, rgba(17, 17, 17, 0.42) 100%);
+      pointer-events: none;
+    }
+
+    .arco-etiqueta-inferior {
+      position: absolute;
+      left: 1.15rem;
+      right: 1.15rem;
+      bottom: 1.1rem;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .arco-etiqueta-inferior span:last-child {
+      padding: 0.28rem 0.65rem;
+      border-radius: var(--radio-pill);
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Sello circular rotatorio */
+    .sello-rotatorio {
+      position: absolute;
+      top: -0.6rem;
+      right: -0.4rem;
+      width: 6.4rem;
+      height: 6.4rem;
+      background: var(--rojo);
+      color: #fff;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--obsidiana);
+      box-shadow: 0 14px 28px -10px rgba(220, 50, 38, 0.55);
+      z-index: 3;
+    }
+    .sello-rotatorio svg.texto-circular {
+      width: 100%; height: 100%;
+      animation: girar 16s linear infinite;
+    }
+    .sello-centro {
+      position: absolute;
+      width: 1.5rem; height: 1.5rem;
+      color: #fff;
+    }
+    @keyframes girar { to { transform: rotate(360deg); } }
+
+    /* Tarjeta flotante en Hero */
+    .hero-tarjeta-flota {
+      position: absolute;
+      left: -0.5rem;
+      bottom: 2.6rem;
+      z-index: 4;
+      background: var(--marfil);
+      border: 1.5px solid var(--obsidiana);
+      border-radius: var(--radio-sm);
+      padding: 0.85rem 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: 6px 6px 0 var(--obsidiana);
+      max-width: 14.5rem;
+    }
+    .hero-tarjeta-icono {
+      width: 2.35rem; height: 2.35rem;
+      border-radius: 0.65rem;
+      background: var(--obsidiana);
+      color: var(--dorado);
+      display: grid; place-items: center;
+      flex-shrink: 0;
+    }
+    .hero-tarjeta-icono svg { width: 1.2rem; height: 1.2rem; }
+    .hero-tarjeta-flota strong { display: block; font-size: 0.86rem; line-height: 1.15; }
+    .hero-tarjeta-flota span { font-size: 0.74rem; color: var(--tinta-suave); }
+
+    /* ---------- 3. CINTA EDITORIAL INCLINADA (MARQUEE) ---------- */
+    .cinta-wrap {
+      overflow: hidden;
+      padding-block: 1.2rem;
+      margin-block: 0.5rem;
+    }
+    .cinta {
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      padding-block: 1.05rem;
+      transform: rotate(-1.1deg) scale(1.03);
+      border-block: 2px solid var(--obsidiana);
+      box-shadow: 0 14px 30px -18px rgba(17, 17, 17, 0.45);
+    }
+    .cinta-pista {
+      display: flex;
+      width: max-content;
+      gap: 2.2rem;
+      animation: deslizar 28s linear infinite;
+    }
+    .cinta:hover .cinta-pista { animation-play-state: paused; }
+    .cinta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 2.2rem;
+      font-family: var(--f-display);
+      font-weight: 700;
+      font-size: 0.96rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .cinta-estrella {
+      color: var(--rojo);
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    @keyframes deslizar { to { transform: translateX(-50%); } }
+
+    /* ---------- 4. SOBRE MÍ + ESPECIALIDADES (FOTO 2) ---------- */
+    .sobre-grid {
+      display: grid;
+      gap: clamp(2.5rem, 5vw, 4.25rem);
+      align-items: start;
+    }
+
+    .sobre-foto-wrap {
+      position: relative;
+      max-width: 29rem;
+      margin-inline: auto;
+      width: 100%;
+    }
+    .marco-estudio {
+      position: relative;
+      border-radius: 1.75rem 5.5rem 1.75rem 1.75rem;
+      overflow: hidden;
+      background: var(--estudio);
+      border: 2px solid var(--obsidiana);
+      box-shadow: -12px 12px 0 var(--arena), -12px 12px 0 2px var(--obsidiana);
+      aspect-ratio: 4 / 5;
+    }
+    .marco-estudio img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .marco-estudio:hover img { transform: scale(1.04); }
+
+    .sobre-caption {
+      margin-top: 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.95rem 1.2rem;
+      background: var(--marfil);
+      border: 1px solid var(--borde);
+      border-radius: var(--radio-sm);
+      font-size: 0.84rem;
+    }
+    .sobre-caption strong { display: block; font-family: var(--f-display); font-size: 0.9rem; }
+    .sobre-caption span { color: var(--tinta-suave); font-size: 0.78rem; }
+    .badge-num {
+      font-family: var(--f-display);
+      font-weight: 800;
+      font-size: 0.78rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: var(--radio-pill);
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      white-space: nowrap;
+    }
+
+    .sobre-contenido h2 {
+      font-size: clamp(2rem, 4.4vw, 3.15rem);
+      margin-bottom: 1.2rem;
+    }
+    .sobre-bio {
+      color: var(--tinta-suave);
+      font-size: 1.04rem;
+      display: grid;
+      gap: 0.95rem;
+      margin-bottom: 2rem;
+    }
+    .sobre-bio strong { color: var(--tinta); }
+
+    /* Grid Bento de las 4 Áreas de Enfoque */
+    .areas-titulo {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rojo);
+      font-weight: 800;
+      margin-bottom: 0.95rem;
+    }
+    .areas-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .area-card {
+      background: var(--marfil);
+      border: 1px solid var(--borde);
+      border-radius: var(--radio-sm);
+      padding: 1.15rem 1.2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.95rem;
+      transition: transform var(--trans), border-color var(--trans), box-shadow var(--trans);
+    }
+    .area-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--obsidiana);
+      box-shadow: 0 14px 28px -18px rgba(17, 17, 17, 0.28);
+    }
+    .area-icono {
+      width: 2.6rem; height: 2.6rem;
+      border-radius: 0.75rem;
+      background: var(--arena);
+      color: var(--obsidiana);
+      display: grid; place-items: center;
+      flex-shrink: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .area-card:hover .area-icono { background: var(--rojo); color: #fff; }
+    .area-icono svg { width: 1.25rem; height: 1.25rem; }
+    .area-card h3 { font-size: 1.02rem; margin-bottom: 0.25rem; }
+    .area-card p { font-size: 0.87rem; color: var(--tinta-suave); line-height: 1.48; }
+
+    /* Cifras y herramientas */
+    .metricas-fila {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+      margin-bottom: 1.75rem;
+    }
+    .metrica-box {
+      background: var(--arena);
+      border-radius: var(--radio-sm);
+      padding: 1rem 0.9rem;
+      text-align: center;
+    }
+    .metrica-box b {
+      display: block;
+      font-family: var(--f-display);
+      font-size: clamp(1.35rem, 3vw, 1.85rem);
+      color: var(--obsidiana);
+      line-height: 1.1;
+    }
+    .metrica-box span { font-size: 0.76rem; color: var(--tinta-suave); font-weight: 600; }
+
+    .herramientas-lista {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .herramientas-lista li {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.38rem 0.82rem;
+      border-radius: 0.5rem;
+      background: var(--marfil);
+      border: 1px solid var(--borde);
+      color: var(--tinta);
+    }
+
+    /* ---------- 5. SERVICIOS (BLOQUE ARQUITECTÓNICO OBSIDIANA) ---------- */
+    .bloque-oscuro {
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      border-radius: clamp(1.75rem, 4vw, 3rem);
+      padding: clamp(3.25rem, 7vw, 5.5rem) clamp(1.25rem, 4.5vw, 3.75rem);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--sombra-fuerte);
+    }
+    .bloque-oscuro::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(40rem 30rem at 100% 0%, rgba(220, 50, 38, 0.2), transparent 60%),
+        radial-gradient(36rem 28rem at 0% 100%, rgba(197, 150, 72, 0.14), transparent 60%);
+      pointer-events: none;
+    }
+    .bloque-oscuro > * { position: relative; z-index: 1; }
+    .bloque-oscuro .kicker { color: var(--tinta-clara-suave); }
+    .bloque-oscuro .encabezado-seccion .lead { color: var(--tinta-clara-suave); }
+
+    .servicios-bento {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.15rem;
+    }
+    .servicio-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid var(--borde-oscuro);
+      border-radius: var(--radio-md);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow: hidden;
+      transition: transform var(--trans), border-color var(--trans), background-color var(--trans);
+    }
+    .servicio-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(220, 50, 38, 0.16), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.35s;
+      pointer-events: none;
+    }
+    .servicio-card:hover::before { opacity: 1; }
+    .servicio-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(220, 50, 38, 0.55);
+      background: rgba(255, 255, 255, 0.055);
+    }
+    .servicio-card.destacado {
+      background: linear-gradient(145deg, rgba(220, 50, 38, 0.14), rgba(255, 255, 255, 0.03));
+      border-color: rgba(220, 50, 38, 0.38);
+    }
+
+    .servicio-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .servicio-ico {
+      width: 3rem; height: 3rem;
+      border-radius: 0.9rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--tinta-clara);
+      display: grid; place-items: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .servicio-card:hover .servicio-ico { background: var(--rojo); color: #fff; border-color: var(--rojo); }
+    .servicio-ico svg { width: 1.35rem; height: 1.35rem; }
+    .servicio-num {
+      font-family: var(--f-display);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--dorado);
+      letter-spacing: 0.08em;
+    }
+
+    .servicio-card h3 { font-size: 1.38rem; color: #fff; }
+    .servicio-card > p { color: var(--tinta-clara-suave); font-size: 0.95rem; }
+
+    .servicio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.2rem;
+    }
+    .servicio-tags li {
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 0.3rem 0.72rem;
+      border-radius: var(--radio-pill);
+      background: rgba(255, 255, 255, 0.06);
+      color: #DDD8CF;
+    }
+
+    .servicio-link {
+      margin-top: auto;
+      padding-top: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #fff;
+      transition: color 0.25s;
+    }
+    .servicio-link svg { width: 1.1rem; height: 1.1rem; transition: transform 0.25s; }
+    .servicio-link:hover { color: var(--rojo); }
+    .servicio-link:hover svg { transform: translateX(5px); }
+
+    /* ---------- 6. PORTAFOLIO INTERACTIVO + FILTROS ---------- */
+    .filtros {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .filtro-btn {
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radio-pill);
+      border: 1.5px solid var(--borde);
+      background: var(--marfil);
+      color: var(--tinta-suave);
+      font-weight: 700;
+      font-size: 0.84rem;
+      transition: all 0.25s;
+    }
+    .filtro-btn:hover { border-color: var(--obsidiana); color: var(--obsidiana); }
+    .filtro-btn.activo {
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      border-color: var(--obsidiana);
+    }
+
+    .portafolio-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.35rem;
+    }
+    .proyecto-card {
+      background: var(--marfil);
+      border: 1.5px solid var(--borde);
+      border-radius: var(--radio-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+    }
+    .proyecto-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--obsidiana);
+      box-shadow: var(--sombra-suave);
+    }
+    .proyecto-card[hidden] { display: none; }
+
+    .proyecto-arte {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 1.25rem;
+      color: #fff;
+    }
+    .proyecto-arte svg.arte-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .proyecto-card:hover .proyecto-arte svg.arte-bg { transform: scale(1.06); }
+    .proyecto-badge {
+      position: relative;
+      z-index: 2;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.36rem 0.78rem;
+      border-radius: var(--radio-pill);
+      background: rgba(17, 17, 17, 0.72);
+      backdrop-filter: blur(8px);
+      color: #fff;
+    }
+    .proyecto-metrica {
+      position: relative;
+      z-index: 2;
+      font-family: var(--f-display);
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 0.36rem 0.78rem;
+      border-radius: var(--radio-pill);
+      background: var(--marfil);
+      color: var(--obsidiana);
+    }
+
+    .proyecto-cuerpo {
+      padding: 1.45rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      flex: 1;
+    }
+    .proyecto-cuerpo h3 { font-size: 1.25rem; }
+    .proyecto-cuerpo p { font-size: 0.92rem; color: var(--tinta-suave); }
+    .proyecto-abrir {
+      margin-top: auto;
+      padding-top: 0.85rem;
+      border: 0;
+      border-top: 1px solid var(--borde);
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--obsidiana);
+      padding-inline: 0;
+      transition: color 0.25s;
+    }
+    .proyecto-abrir:hover { color: var(--rojo); }
+    .proyecto-abrir svg { width: 1.05rem; height: 1.05rem; transition: transform 0.25s; }
+    .proyecto-abrir:hover svg { transform: translateX(4px); }
+
+    /* ---------- 7. PROCESO CREATIVO ---------- */
+    .proceso-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.15rem;
+    }
+    .paso-card {
+      background: var(--marfil);
+      border: 1.5px solid var(--borde);
+      border-radius: var(--radio-md);
+      padding: 1.65rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: transform var(--trans), border-color var(--trans);
+    }
+    .paso-card:hover { transform: translateY(-4px); border-color: var(--obsidiana); }
+    .paso-num {
+      font-family: var(--f-editorial);
+      font-style: italic;
+      font-size: 2.5rem;
+      line-height: 1;
+      color: var(--rojo);
+    }
+    .paso-card h3 { font-size: 1.22rem; }
+    .paso-card p { font-size: 0.92rem; color: var(--tinta-suave); }
+    .paso-entregable {
+      margin-top: auto;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.42rem 0.8rem;
+      border-radius: 0.55rem;
+      background: var(--arena);
+      color: var(--obsidiana);
+      width: fit-content;
+    }
+
+    /* ---------- 8. LABORATORIO CREATIVO (MINIJUEGO REDISEÑADO) ---------- */
+    .lab-caja {
+      background: var(--arena);
+      border: 2px solid var(--obsidiana);
+      border-radius: var(--radio-lg);
+      padding: clamp(1.75rem, 4.5vw, 3rem);
+      display: grid;
+      gap: 2.25rem;
+      align-items: center;
+      box-shadow: 10px 10px 0 var(--obsidiana);
+    }
+    .lab-info h3 {
+      font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+      margin-bottom: 0.85rem;
+    }
+    .lab-info > p { color: var(--tinta-suave); margin-bottom: 1.35rem; max-width: 44ch; }
+    .lab-leyenda {
+      display: grid;
+      gap: 0.65rem;
+      margin-bottom: 1.35rem;
+    }
+    .lab-leyenda li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: var(--marfil);
+      padding: 0.6rem 0.9rem;
+      border-radius: 0.7rem;
+      border: 1px solid var(--borde);
+    }
+    .muestra { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+    .muestra.m-idea { background: var(--rojo); }
+    .muestra.m-viral { background: var(--dorado); border-radius: 3px; transform: rotate(45deg); }
+    .muestra.m-ruido { background: var(--obsidiana); border-radius: 3px; }
+
+    .lab-mando {
+      display: grid;
+      gap: 0.85rem;
+      justify-items: center;
+    }
+    .lab-marcador {
+      width: 100%;
+      max-width: 380px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem;
+    }
+    .lab-marcador > div {
+      background: var(--marfil);
+      border: 1.5px solid var(--obsidiana);
+      border-radius: 0.85rem;
+      padding: 0.55rem 0.65rem;
+      text-align: center;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--tinta-suave);
+    }
+    .lab-marcador b {
+      display: block;
+      font-family: var(--f-display);
+      font-size: 1.35rem;
+      color: var(--obsidiana);
+      margin-top: 0.1rem;
+    }
+
+    .lab-canvas {
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+      border-radius: 1.25rem;
+      border: 2px solid var(--obsidiana);
+      background: var(--obsidiana);
+      touch-action: none;
+      cursor: crosshair;
+      box-shadow: 0 18px 36px -18px rgba(17, 17, 17, 0.45);
+    }
+    .lab-controles {
+      display: flex;
+      gap: 0.65rem;
+      width: 100%;
+      max-width: 380px;
+    }
+    .lab-controles .btn { flex: 1; padding: 0.72rem 1rem; }
+    .lab-controles .btn-dir { flex: 0 0 3.5rem; }
+    .lab-tip { font-size: 0.78rem; color: var(--tinta-suave); text-align: center; max-width: 38ch; }
+
+    /* ---------- 9. CONTACTO ---------- */
+    .contacto-wrap {
+      background: var(--marfil);
+      border: 2px solid var(--obsidiana);
+      border-radius: var(--radio-lg);
+      padding: clamp(1.75rem, 5vw, 3.5rem);
+      display: grid;
+      gap: clamp(2rem, 5vw, 3.75rem);
+      box-shadow: 12px 12px 0 var(--rojo);
+    }
+    .contacto-info h2 {
+      font-size: clamp(2rem, 4.4vw, 3.2rem);
+      margin-bottom: 0.9rem;
+    }
+    .contacto-sub {
+      font-size: 1.06rem;
+      color: var(--tinta-suave);
+      margin-bottom: 1.85rem;
+      max-width: 44ch;
+    }
+
+    .contacto-tarjetas {
+      display: grid;
+      gap: 0.85rem;
+    }
+    .canal-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.9rem;
+      padding: 0.95rem 1.15rem;
+      background: var(--papel);
+      border: 1.5px solid var(--borde);
+      border-radius: var(--radio-sm);
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .canal-card:hover { border-color: var(--obsidiana); transform: translateX(4px); }
+    .canal-izq {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-width: 0;
+      text-decoration: none;
+    }
+    .canal-ico {
+      width: 2.65rem; height: 2.65rem;
+      border-radius: 0.75rem;
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      display: grid; place-items: center;
+      flex-shrink: 0;
+    }
+    .canal-ico svg { width: 1.25rem; height: 1.25rem; }
+    .canal-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--tinta-suave);
+    }
+    .canal-valor {
+      display: block;
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--obsidiana);
+      overflow-wrap: anywhere;
+    }
+    .canal-acciones {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-shrink: 0;
+    }
+    .btn-mini {
+      padding: 0.42rem 0.72rem;
+      border-radius: 0.55rem;
+      border: 1px solid var(--borde);
+      background: var(--marfil);
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--obsidiana);
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .btn-mini:hover { background: var(--obsidiana); color: #fff; border-color: var(--obsidiana); }
+    .btn-mini.wa { background: #16A34A; color: #fff; border-color: #16A34A; }
+    .btn-mini.wa:hover { background: #15803D; border-color: #15803D; }
+
+    /* Formulario */
+    .formulario { display: grid; gap: 1.1rem; }
+    .campo { display: grid; gap: 0.42rem; }
+    .campo label { font-size: 0.84rem; font-weight: 700; color: var(--obsidiana); }
+    .campo input, .campo select, .campo textarea {
+      width: 100%;
+      padding: 0.88rem 1rem;
+      border-radius: 0.85rem;
+      border: 1.5px solid var(--borde);
+      background: var(--papel);
+      color: var(--obsidiana);
+      transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+    }
+    .campo textarea { min-height: 7.5rem; resize: vertical; }
+    .campo input:focus, .campo select:focus, .campo textarea:focus {
+      outline: none;
+      border-color: var(--obsidiana);
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(220, 50, 38, 0.12);
+    }
+    .campo .error-msg {
+      display: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--rojo);
+    }
+    .campo[data-error="true"] input,
+    .campo[data-error="true"] select,
+    .campo[data-error="true"] textarea { border-color: var(--rojo); }
+    .campo[data-error="true"] .error-msg { display: block; }
+
+    .form-botones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.35rem;
+    }
+    .form-botones .btn { flex: 1 1 12rem; }
+
+    .gracias-box {
+      background: var(--papel);
+      border: 1.5px solid var(--obsidiana);
+      border-radius: var(--radio-md);
+      padding: 2.25rem 1.75rem;
+      text-align: center;
+      display: grid;
+      gap: 0.85rem;
+      justify-items: center;
+    }
+    .gracias-box[hidden] { display: none; }
+    .gracias-ico {
+      width: 3.5rem; height: 3.5rem;
+      border-radius: 50%;
+      background: var(--rojo);
+      color: #fff;
+      display: grid; place-items: center;
+    }
+    .gracias-ico svg { width: 1.65rem; height: 1.65rem; }
+    .gracias-box p { color: var(--tinta-suave); max-width: 36ch; }
+    .gracias-acciones { display: flex; flex-wrap: wrap; gap: 0.65rem; justify-content: center; margin-top: 0.4rem; }
+
+    /* ---------- 10. FOOTER EDITORIAL ---------- */
+    .pie {
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      padding-top: clamp(3.5rem, 7vw, 5.5rem);
+      padding-bottom: 2.25rem;
+      margin-top: 2rem;
+    }
+    .pie-grid {
+      display: grid;
+      gap: 2.25rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--borde-oscuro);
+    }
+    .pie-marca p { color: var(--tinta-clara-suave); margin-top: 0.85rem; max-width: 34ch; font-size: 0.94rem; }
+    .pie h3 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--dorado);
+      margin-bottom: 1rem;
+    }
+    .pie ul { display: grid; gap: 0.55rem; }
+    .pie ul a {
+      text-decoration: none;
+      color: var(--tinta-clara-suave);
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+    .pie ul a:hover { color: #fff; }
+
+    .pie-firma {
+      font-family: var(--f-display);
+      font-weight: 800;
+      font-size: clamp(2.1rem, 8.6vw, 6.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      text-align: center;
+      padding-block: clamp(1.75rem, 4vw, 3rem);
+      color: rgba(246, 242, 235, 0.1);
+      user-select: none;
+    }
+    .pie-final {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.82rem;
+      color: var(--tinta-clara-suave);
+    }
+
+    /* Botón subir y Toast */
+    .subir {
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 80;
+      width: 3rem; height: 3rem;
+      border-radius: 50%;
+      border: 1.5px solid var(--obsidiana);
+      background: var(--marfil);
+      color: var(--obsidiana);
+      display: grid; place-items: center;
+      box-shadow: 0 12px 26px -10px rgba(17, 17, 17, 0.35);
+      opacity: 0;
+      transform: translateY(14px);
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s, background-color 0.25s, color 0.25s;
+    }
+    .subir.mostrar { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .subir:hover { background: var(--rojo); color: #fff; border-color: var(--rojo); }
+    .subir svg { width: 1.25rem; height: 1.25rem; }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 1.5rem;
+      transform: translate(-50%, 16px);
+      z-index: 150;
+      background: var(--obsidiana);
+      color: var(--tinta-clara);
+      padding: 0.72rem 1.25rem;
+      border-radius: var(--radio-pill);
+      font-size: 0.86rem;
+      font-weight: 700;
+      box-shadow: var(--sombra-fuerte);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+    }
+    .toast.visible { opacity: 1; transform: translate(-50%, 0); }
+
+    /* Modal Caso de Estudio */
+    dialog.caso-modal {
+      width: min(94vw, 44rem);
+      padding: 0;
+      border: 2px solid var(--obsidiana);
+      border-radius: var(--radio-md);
+      background: var(--marfil);
+      color: var(--tinta);
+      box-shadow: var(--sombra-fuerte);
+      overflow: hidden;
+    }
+    dialog.caso-modal::backdrop {
+      background: rgba(17, 17, 17, 0.68);
+      backdrop-filter: blur(6px);
+    }
+    .caso-top { position: relative; height: 14rem; overflow: hidden; }
+    .caso-cerrar {
+      position: absolute;
+      top: 1rem; right: 1rem; z-index: 5;
+      width: 2.5rem; height: 2.5rem;
+      border-radius: 50%;
+      border: 1.5px solid var(--obsidiana);
+      background: var(--marfil);
+      color: var(--obsidiana);
+      font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .caso-cerrar:hover { background: var(--rojo); color: #fff; border-color: var(--rojo); }
+    .caso-body { padding: 1.75rem; display: grid; gap: 1rem; }
+    .caso-cat {
+      font-size: 0.74rem; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--rojo);
+    }
+    .caso-body h3 { font-size: 1.7rem; }
+    .caso-dl {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+      margin-block: 0.25rem;
+    }
+    .caso-dl > div {
+      background: var(--papel);
+      border: 1px solid var(--borde);
+      border-radius: 0.85rem;
+      padding: 0.9rem 1rem;
+    }
+    .caso-dl dt {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--tinta-suave);
+      margin-bottom: 0.25rem;
+    }
+    .caso-dl dd { margin: 0; font-size: 0.92rem; color: var(--tinta); }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (min-width: 720px) {
+      .areas-grid { grid-template-columns: repeat(2, 1fr); }
+      .servicios-bento { grid-template-columns: repeat(2, 1fr); }
+      .portafolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .proceso-grid { grid-template-columns: repeat(2, 1fr); }
+      .caso-dl { grid-template-columns: repeat(2, 1fr); }
+      .pie-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr; }
+    }
+
+    @media (min-width: 980px) {
+      .nav-links { display: flex; }
+      .nav-cta { display: inline-flex; }
+      .menu-toggle, .menu-movil { display: none; }
+
+      .hero-grid { grid-template-columns: 1.18fr 0.82fr; }
+      .sobre-grid { grid-template-columns: 0.85fr 1.15fr; }
+
+      /* Bento asimétrico de 5 servicios: 2 arriba (3 cols c/u) + 3 abajo (2 cols c/u) */
+      .servicios-bento { grid-template-columns: repeat(6, 1fr); }
+      .servicios-bento .servicio-card:nth-child(1),
+      .servicios-bento .servicio-card:nth-child(2) { grid-column: span 3; }
+      .servicios-bento .servicio-card:nth-child(3),
+      .servicios-bento .servicio-card:nth-child(4),
+      .servicios-bento .servicio-card:nth-child(5) { grid-column: span 2; }
+
+      .portafolio-grid { grid-template-columns: repeat(3, 1fr); }
+      .proceso-grid { grid-template-columns: repeat(4, 1fr); }
+      .lab-caja { grid-template-columns: 1fr 1fr; }
+      .contacto-wrap { grid-template-columns: 0.95fr 1.05fr; align-items: start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sprites SVG limpios -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-marca" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-megafono" viewBox="0 0 24 24"><path d="M3 11v2a2 2 0 0 0 2 2h2l5 4V5L7 9H5a2 2 0 0 0-2 2z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M19 6a8 8 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="i-contenido" viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M17 10l4-2.5v9L17 14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="8.5" cy="10.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-estrategia" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-redes" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.9"/><rect x="13" y="4" width="7" height="7" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.9"/><rect x="4" y="13" width="7" height="7" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M16.5 13v7M13 16.5h7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="i-pauta" viewBox="0 0 24 24"><path d="M4 20V12M10 20V5M16 20v-8M22 20H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M15 7l4-3 2 2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chispa" viewBox="0 0 24 24"><path d="M12 2.5l2.2 6.8 6.8 2.2-6.8 2.2L12 20.5l-2.2-6.8-6.8-2.2 6.8-2.2z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-correo" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.5 3.5h3.2l1.5 4.2-2.1 1.7a13 13 0 0 0 5.5 5.5l1.7-2.1 4.2 1.5v3.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <div class="progreso" aria-hidden="true"></div>
+
+  <!-- Fondo editorial nuevo: dot-matrix + líneas topográficas -->
+  <div class="fondo-editorial" aria-hidden="true"></div>
+  <div class="fondo-curvas" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none">
+      <path d="M-80 220C210 110 470 360 790 250C1080 150 1280 40 1520 140" stroke="#111111" stroke-opacity="0.06" stroke-width="1.5"/>
+      <path d="M-80 260C230 160 490 410 810 300C1100 200 1300 90 1520 190" stroke="#DC3226" stroke-opacity="0.08" stroke-width="1.2" stroke-dasharray="6 8"/>
+      <path d="M-60 760C280 620 560 860 920 710C1190 595 1350 670 1520 620" stroke="#C59648" stroke-opacity="0.14" stroke-width="1.5"/>
+    </svg>
+  </div>
+
+  <!-- ================= NAVEGACIÓN ================= -->
+  <header class="nav-wrap">
+    <div class="nav-pill" id="nav-pill">
+      <a class="marca-logo" href="#inicio" aria-label="Camilo Andrés Díaz, ir al inicio">
+        <span class="marca-monograma" aria-hidden="true">CD</span>
+        <span>Camilo Díaz</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#inicio" class="activo">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-acciones">
+        <a class="btn btn-primario btn-sm nav-cta" href="#contacto">
+          Conectemos
+          <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú">
+          <span class="barras"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu-movil" id="menu-movil" aria-label="Menú móvil">
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#portafolio">Portafolio</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+    <a class="btn btn-rojo" href="#contacto">¡Conectemos ahora!</a>
+  </nav>
+
+  <main id="contenido">
+
+    <!-- ================= 1. HERO ================= -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+      <div class="contenedor hero-grid">
+        <div class="hero-texto">
+          <div class="badge-disponible">
+            <span class="pulso" aria-hidden="true"></span>
+            Abierto a nuevas oportunidades · Colombia
+          </div>
+
+          <h1 class="hero-titulo" id="titulo-hero">
+            Camilo Andrés
+            <span class="linea-suave">Díaz</span>
+          </h1>
+
+          <p class="hero-rol-dinamico">
+            <span>Publicidad &amp; Marketing Digital</span>
+            <span class="sep">·</span>
+            <span id="rol-rotativo">Creatividad e Ideas</span>
+          </p>
+
+          <p class="hero-desc">
+            <strong>Estudiante de Publicidad y Marketing Digital</strong>, apasionado por la
+            <strong>creatividad, la comunicación y las nuevas ideas</strong>. Transformo conceptos
+            en marcas memorables, campañas con propósito y contenido que conecta de verdad.
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primario" href="#servicios">
+              Explorar servicios
+              <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+            </a>
+            <a class="btn btn-secundario" href="#contacto">¡Conectemos!</a>
+          </div>
+
+          <ul class="hero-pilares" aria-label="Áreas clave">
+            <li class="chip-pilar">Diseño e identidad de marca</li>
+            <li class="chip-pilar">Campañas publicitarias</li>
+            <li class="chip-pilar">Creación de contenido</li>
+            <li class="chip-pilar">Estrategias de marketing digital</li>
+          </ul>
+        </div>
+
+        <!-- Imagen cargada #1: Retrato creativo principal -->
+        <div class="hero-visual">
+          <div class="sello-rotatorio" aria-hidden="true">
+            <svg class="texto-circular" viewBox="0 0 100 100">
+              <defs>
+                <path id="circulo-sello" d="M 50,50 m -36,0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"/>
+              </defs>
+              <text fill="#FFFFFF" font-size="8.6" font-weight="700" letter-spacing="2.3">
+                <textPath href="#circulo-sello">CREATIVIDAD • PUBLICIDAD • MARKETING •</textPath>
+              </text>
+            </svg>
+            <svg class="sello-centro"><use href="#i-chispa"/></svg>
+          </div>
+
+          <div class="arco-marco" id="retrato-hero">
+            <img src="img/camilo-hero.jpg" width="768" height="1024" alt="Retrato de Camilo Andrés Díaz señalando hacia la cámara con gesto creativo de ideas">
+            <div class="arco-etiqueta-inferior">
+              <span>01 // Visión Creativa</span>
+              <span>@dondeesta_andres</span>
+            </div>
+          </div>
+
+          <div class="hero-tarjeta-flota">
+            <span class="hero-tarjeta-icono" aria-hidden="true"><svg><use href="#i-estrategia"/></svg></span>
+            <div>
+              <strong>Ideas con propósito</strong>
+              <span>Comunicación + Estrategia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FRANJA CINÉTICA EDITORIAL ================= -->
+    <div class="cinta-wrap" aria-label="Especialidades y servicios">
+      <div class="cinta">
+        <div class="cinta-pista" aria-hidden="true">
+          <span class="cinta-item">Diseño e identidad de marca <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Campañas publicitarias <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Creación de contenido <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Estrategias de marketing digital <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Diseño para redes sociales <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Branding <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Estrategias creativas <span class="cinta-estrella">✦</span></span>
+          <!-- Duplicado para loop continuo -->
+          <span class="cinta-item">Diseño e identidad de marca <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Campañas publicitarias <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Creación de contenido <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Estrategias de marketing digital <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Diseño para redes sociales <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Branding <span class="cinta-estrella">✦</span></span>
+          <span class="cinta-item">Estrategias creativas <span class="cinta-estrella">✦</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 2. SOBRE MÍ & ÁREAS DE ENFOQUE ================= -->
+    <section class="seccion" id="sobre-mi" aria-labelledby="titulo-sobre">
+      <div class="contenedor sobre-grid">
+
+        <!-- Imagen cargada #2: Camilo trabajando en su laptop -->
+        <div class="sobre-foto-wrap rv">
+          <div class="marco-estudio">
+            <img src="img/camilo-trabajo.jpg" width="768" height="1024" loading="lazy" alt="Camilo Andrés Díaz trabajando concentrado en su portátil en estrategias y campañas digitales">
+          </div>
+          <div class="sobre-caption">
+            <div>
+              <strong>Camilo Andrés Díaz</strong>
+              <span>De la idea a la ejecución digital</span>
+            </div>
+            <span class="badge-num">02 // EN ACCIÓN</span>
+          </div>
+        </div>
+
+        <div class="sobre-contenido rv">
+          <p class="kicker"><span class="kicker-dot"></span>Sobre mí &amp; Enfoque</p>
+          <h2 id="titulo-sobre">Creatividad que <span class="serif-accent">comunica</span> y estrategias que funcionan.</h2>
+
+          <div class="sobre-bio">
+            <p>
+              Soy <strong>Camilo Andrés Díaz</strong>, estudiante de <strong>Publicidad y Marketing Digital</strong>,
+              apasionado por la creatividad, la comunicación y las nuevas ideas.
+            </p>
+            <p>
+              Combino pensamiento estratégico con sensibilidad visual para construir marcas con personalidad,
+              piezas que detienen el scroll y campañas diseñadas para generar impacto real en la audiencia.
+            </p>
+          </div>
+
+          <p class="areas-titulo">Mis 4 pilares de trabajo</p>
+          <ul class="areas-grid">
+            <li class="area-card">
+              <span class="area-icono" aria-hidden="true"><svg><use href="#i-marca"/></svg></span>
+              <div>
+                <h3>Diseño e identidad de marca</h3>
+                <p>Sistemas visuales coherentes, logotipos y universos gráficos con carácter propio.</p>
+              </div>
+            </li>
+            <li class="area-card">
+              <span class="area-icono" aria-hidden="true"><svg><use href="#i-megafono"/></svg></span>
+              <div>
+                <h3>Campañas publicitarias</h3>
+                <p>Conceptos memorables, storytelling y mensajes creativos pensados para persuadir.</p>
+              </div>
+            </li>
+            <li class="area-card">
+              <span class="area-icono" aria-hidden="true"><svg><use href="#i-contenido"/></svg></span>
+              <div>
+                <h3>Creación de contenido</h3>
+                <p>Piezas visuales, formatos dinámicos y narrativas actuales que conectan comunidades.</p>
+              </div>
+            </li>
+            <li class="area-card">
+              <span class="area-icono" aria-hidden="true"><svg><use href="#i-estrategia"/></svg></span>
+              <div>
+                <h3>Estrategias de marketing digital</h3>
+                <p>Planificación orientada a objetivos, posicionamiento y análisis de resultados.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="metricas-fila" aria-label="Indicadores de enfoque">
+            <div class="metrica-box">
+              <b data-contar="5" data-prefijo="">5</b>
+              <span>Servicios clave</span>
+            </div>
+            <div class="metrica-box">
+              <b data-contar="100" data-sufijo="%">100%</b>
+              <span>Enfoque creativo</span>
+            </div>
+            <div class="metrica-box">
+              <b data-contar="360" data-sufijo="°">360°</b>
+              <span>Visión de marca</span>
+            </div>
+          </div>
+
+          <ul class="herramientas-lista" aria-label="Herramientas creativas">
+            <li>Illustrator</li>
+            <li>Photoshop</li>
+            <li>Canva Pro</li>
+            <li>CapCut</li>
+            <li>Premiere</li>
+            <li>Meta Ads</li>
+            <li>Copywriting</li>
+            <li>Branding</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. SERVICIOS (5 SERVICIOS EN BENTO OBSIDIANA) ================= -->
+    <section class="seccion" id="servicios" aria-labelledby="titulo-servicios">
+      <div class="contenedor">
+        <div class="bloque-oscuro">
+          <div class="encabezado-seccion rv">
+            <div>
+              <p class="kicker"><span class="kicker-dot"></span>Servicios</p>
+              <h2 id="titulo-servicios">Soluciones creativas para <span class="serif-accent-gold">impulsar tu marca</span></h2>
+            </div>
+            <p class="lead">
+              Cada proyecto combina diseño, narrativa y estrategia digital para que tu mensaje destaque y genere conexión real.
+            </p>
+          </div>
+
+          <ul class="servicios-bento">
+            <li class="servicio-card destacado rv">
+              <div class="servicio-top">
+                <span class="servicio-ico" aria-hidden="true"><svg><use href="#i-redes"/></svg></span>
+                <span class="servicio-num">01</span>
+              </div>
+              <h3>Diseño para redes sociales</h3>
+              <p>Piezas gráficas de alto impacto, carruseles, historias y grillas visuales alineadas con la personalidad de tu marca.</p>
+              <ul class="servicio-tags">
+                <li>Feed coherente</li>
+                <li>Carruseles &amp; Stories</li>
+                <li>Plantillas editables</li>
+              </ul>
+              <a class="servicio-link" href="#contacto" data-servicio="Diseño para redes sociales">
+                Solicitar este servicio
+                <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+              </a>
+            </li>
+
+            <li class="servicio-card rv">
+              <div class="servicio-top">
+                <span class="servicio-ico" aria-hidden="true"><svg><use href="#i-contenido"/></svg></span>
+                <span class="servicio-num">02</span>
+              </div>
+              <h3>Creación de contenido</h3>
+              <p>Conceptualización, guion y producción de contenido fresco y relevante pensado para atraer, entretener y fidelizar.</p>
+              <ul class="servicio-tags">
+                <li>Reels &amp; Video corto</li>
+                <li>Storytelling</li>
+                <li>Copywriting creativo</li>
+              </ul>
+              <a class="servicio-link" href="#contacto" data-servicio="Creación de contenido">
+                Solicitar este servicio
+                <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+              </a>
+            </li>
+
+            <li class="servicio-card rv">
+              <div class="servicio-top">
+                <span class="servicio-ico" aria-hidden="true"><svg><use href="#i-marca"/></svg></span>
+                <span class="servicio-num">03</span>
+              </div>
+              <h3>Branding</h3>
+              <p>Construcción de identidad visual y verbal: paleta, tipografía, tono de comunicación y guía de estilo memorable.</p>
+              <ul class="servicio-tags">
+                <li>Identidad visual</li>
+                <li>Manual de marca</li>
+              </ul>
+              <a class="servicio-link" href="#contacto" data-servicio="Branding">
+                Solicitar este servicio
+                <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+              </a>
+            </li>
+
+            <li class="servicio-card rv">
+              <div class="servicio-top">
+                <span class="servicio-ico" aria-hidden="true"><svg><use href="#i-pauta"/></svg></span>
+                <span class="servicio-num">04</span>
+              </div>
+              <h3>Publicidad digital</h3>
+              <p>Campañas segmentadas con creatividades que convierten, optimización constante y lectura clara de métricas.</p>
+              <ul class="servicio-tags">
+                <li>Anuncios digitales</li>
+                <li>Segmentación &amp; Métricas</li>
+              </ul>
+              <a class="servicio-link" href="#contacto" data-servicio="Publicidad digital">
+                Solicitar este servicio
+                <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+              </a>
+            </li>
+
+            <li class="servicio-card rv">
+              <div class="servicio-top">
+                <span class="servicio-ico" aria-hidden="true"><svg><use href="#i-chispa"/></svg></span>
+                <span class="servicio-num">05</span>
+              </div>
+              <h3>Estrategias creativas</h3>
+              <p>Ideas diferenciadoras, conceptos de campaña y planes de comunicación que posicionan tu marca frente a la competencia.</p>
+              <ul class="servicio-tags">
+                <li>Concepto de campaña</li>
+                <li>Plan estratégico</li>
+              </ul>
+              <a class="servicio-link" href="#contacto" data-servicio="Estrategias creativas">
+                Solicitar este servicio
+                <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. PORTAFOLIO CON FILTROS ================= -->
+    <section class="seccion" id="portafolio" aria-labelledby="titulo-portafolio">
+      <div class="contenedor">
+        <div class="encabezado-seccion rv">
+          <div>
+            <p class="kicker"><span class="kicker-dot"></span>Portafolio</p>
+            <h2 id="titulo-portafolio">Ideas convertidas en <span class="serif-accent">proyectos reales</span></h2>
+          </div>
+          <p class="lead">
+            Explora conceptos de branding, campañas publicitarias, contenido y marketing digital. Haz clic en cada caso para ver el detalle.
+          </p>
+        </div>
+
+        <div class="filtros rv" role="tablist" aria-label="Filtrar proyectos por categoría">
+          <button class="filtro-btn activo" type="button" data-filtro="todos">Todos</button>
+          <button class="filtro-btn" type="button" data-filtro="branding">Branding</button>
+          <button class="filtro-btn" type="button" data-filtro="campanas">Campañas</button>
+          <button class="filtro-btn" type="button" data-filtro="contenido">Contenido</button>
+          <button class="filtro-btn" type="button" data-filtro="marketing">Marketing Digital</button>
+        </div>
+
+        <ul class="portafolio-grid" id="proyectos-grid">
+          <!-- Generado dinámicamente por JS -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 5. PROCESO CREATIVO ================= -->
+    <section class="seccion" id="proceso" aria-labelledby="titulo-proceso">
+      <div class="contenedor">
+        <div class="encabezado-seccion rv">
+          <div>
+            <p class="kicker"><span class="kicker-dot"></span>Metodología</p>
+            <h2 id="titulo-proceso">Cómo llevo una idea <span class="serif-accent">al siguiente nivel</span></h2>
+          </div>
+          <p class="lead">
+            Un flujo claro y colaborativo para que cada proyecto tenga dirección creativa, estética cuidada y resultados medibles.
+          </p>
+        </div>
+
+        <ol class="proceso-grid">
+          <li class="paso-card rv">
+            <span class="paso-num">01</span>
+            <h3>Escucha &amp; Diagnóstico</h3>
+            <p>Analizo tu marca, audiencia, objetivos y entorno competitivo para encontrar el insight clave.</p>
+            <span class="paso-entregable">Brief creativo</span>
+          </li>
+          <li class="paso-card rv">
+            <span class="paso-num">02</span>
+            <h3>Concepto &amp; Estrategia</h3>
+            <p>Defino la gran idea, los pilares de comunicación y la ruta digital más efectiva para tu mensaje.</p>
+            <span class="paso-entregable">Propuesta estratégica</span>
+          </li>
+          <li class="paso-card rv">
+            <span class="paso-num">03</span>
+            <h3>Diseño &amp; Producción</h3>
+            <p>Creo la identidad, piezas para redes, campañas y contenido visual con atención obsesiva al detalle.</p>
+            <span class="paso-entregable">Piezas &amp; Entregables</span>
+          </li>
+          <li class="paso-card rv">
+            <span class="paso-num">04</span>
+            <h3>Lanzamiento &amp; Mejora</h3>
+            <p>Activamos la campaña, medimos el impacto y optimizamos para multiplicar el alcance y la recordación.</p>
+            <span class="paso-entregable">Reporte &amp; Optimización</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= 6. LABORATORIO INTERACTIVO ================= -->
+    <section class="seccion" id="laboratorio" aria-labelledby="titulo-lab">
+      <div class="contenedor">
+        <div class="lab-caja rv">
+          <div class="lab-info">
+            <p class="kicker"><span class="kicker-dot"></span>Laboratorio Interactivo</p>
+            <h3 id="titulo-lab">Minijuego: <span class="serif-accent">Atrapa la Idea</span></h3>
+            <p>
+              Pon a prueba tus reflejos creativos: mueve el captador <strong>CD</strong> para atrapar buenas ideas y campañas virales antes de que se pierdan, evitando el ruido publicitario.
+            </p>
+            <ul class="lab-leyenda">
+              <li><span class="muestra m-idea"></span>Idea creativa · +1 punto</li>
+              <li><span class="muestra m-viral"></span>Campaña viral · +5 puntos + combo</li>
+              <li><span class="muestra m-ruido"></span>Ruido sin estrategia · resta 1 vida</li>
+            </ul>
+            <p class="lab-tip" style="text-align:left">
+              Controles: arrastra sobre el lienzo, usa las teclas <strong>← →</strong> o <strong>A / D</strong>, o presiona los botones táctiles.
+            </p>
+          </div>
+
+          <div class="lab-mando">
+            <div class="lab-marcador" aria-live="off">
+              <div>Puntos<b id="j-puntos">0</b></div>
+              <div>Vidas<b id="j-vidas">3</b></div>
+              <div>Récord<b id="j-record">0</b></div>
+            </div>
+
+            <canvas class="lab-canvas" id="lienzo" width="380" height="440" role="img" aria-label="Minijuego Atrapa la Idea de Camilo Andrés Díaz"></canvas>
+
+            <div class="lab-controles">
+              <button class="btn btn-secundario btn-dir" type="button" id="j-izq" aria-label="Mover a la izquierda">◀</button>
+              <button class="btn btn-rojo" type="button" id="j-jugar">Jugar ahora</button>
+              <button class="btn btn-secundario btn-dir" type="button" id="j-der" aria-label="Mover a la derecha">▶</button>
+            </div>
+            <p class="solo-lector" id="j-anuncio" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. CONTACTO ================= -->
+    <section class="seccion" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <div class="contacto-wrap rv">
+          <div class="contacto-info">
+            <p class="kicker"><span class="kicker-dot"></span>Contacto</p>
+            <h2 id="titulo-contacto">¡Conectemos y creemos <span class="serif-accent">algo increíble!</span></h2>
+            <p class="contacto-sub">
+              <strong>Estoy abierto a nuevas oportunidades</strong>, proyectos de marca, campañas creativas y colaboraciones digitales. Escríbeme por tu canal favorito o envíame tu idea aquí mismo.
+            </p>
+
+            <ul class="contacto-tarjetas">
+              <li class="canal-card">
+                <a class="canal-izq" href="mailto:camiloadiaz12@gmail.com">
+                  <span class="canal-ico" aria-hidden="true"><svg><use href="#i-correo"/></svg></span>
+                  <div>
+                    <span class="canal-label">Correo electrónico</span>
+                    <span class="canal-valor">camiloadiaz12@gmail.com</span>
+                  </div>
+                </a>
+                <div class="canal-acciones">
+                  <button class="btn-mini" type="button" data-copiar="camiloadiaz12@gmail.com">Copiar</button>
+                </div>
+              </li>
+
+              <li class="canal-card">
+                <a class="canal-izq" href="https://instagram.com/dondeesta_andres" target="_blank" rel="noopener">
+                  <span class="canal-ico" aria-hidden="true"><svg><use href="#i-insta"/></svg></span>
+                  <div>
+                    <span class="canal-label">Instagram</span>
+                    <span class="canal-valor">@dondeesta_andres</span>
+                  </div>
+                </a>
+                <div class="canal-acciones">
+                  <a class="btn-mini" href="https://instagram.com/dondeesta_andres" target="_blank" rel="noopener">Ver perfil</a>
+                </div>
+              </li>
+
+              <li class="canal-card">
+                <a class="canal-izq" href="tel:+573163004524">
+                  <span class="canal-ico" aria-hidden="true"><svg><use href="#i-tel"/></svg></span>
+                  <div>
+                    <span class="canal-label">Número / WhatsApp</span>
+                    <span class="canal-valor">316 300 4524</span>
+                  </div>
+                </a>
+                <div class="canal-acciones">
+                  <button class="btn-mini" type="button" data-copiar="3163004524">Copiar</button>
+                  <a class="btn-mini wa" href="https://wa.me/573163004524?text=Hola%20Camilo%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conectar%20contigo." target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <form class="formulario" id="formulario" novalidate>
+              <div class="campo">
+                <label for="f-nombre">Tu nombre</label>
+                <input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="¿Cómo te llamas?" required>
+                <span class="error-msg" id="e-nombre">Por favor escribe tu nombre.</span>
+              </div>
+
+              <div class="campo">
+                <label for="f-correo">Tu correo electrónico</label>
+                <input id="f-correo" name="correo" type="email" autocomplete="email" placeholder="nombre@correo.com" required>
+                <span class="error-msg" id="e-correo">Escribe un correo válido (ej: nombre@correo.com).</span>
+              </div>
+
+              <div class="campo">
+                <label for="f-servicio">Servicio de interés</label>
+                <select id="f-servicio" name="servicio" required>
+                  <option value="">Selecciona un servicio</option>
+                  <option value="Diseño para redes sociales">Diseño para redes sociales</option>
+                  <option value="Creación de contenido">Creación de contenido</option>
+                  <option value="Branding">Branding</option>
+                  <option value="Publicidad digital">Publicidad digital</option>
+                  <option value="Estrategias creativas">Estrategias creativas</option>
+                  <option value="Nueva oportunidad / Colaboración">Nueva oportunidad / Colaboración</option>
+                </select>
+                <span class="error-msg" id="e-servicio">Elige el servicio o motivo de contacto.</span>
+              </div>
+
+              <div class="campo">
+                <label for="f-mensaje">Cuéntame tu idea</label>
+                <textarea id="f-mensaje" name="mensaje" placeholder="Describe brevemente tu marca, proyecto u oportunidad..." required></textarea>
+                <span class="error-msg" id="e-mensaje">Cuéntame un poco más (mínimo 10 caracteres).</span>
+              </div>
+
+              <div class="form-botones">
+                <button class="btn btn-primario" type="submit" id="f-enviar">
+                  Enviar mensaje
+                  <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+                </button>
+                <button class="btn btn-secundario" type="button" id="f-whatsapp">
+                  Enviar por WhatsApp
+                </button>
+              </div>
+            </form>
+
+            <div class="gracias-box" id="gracias" hidden>
+              <span class="gracias-ico" aria-hidden="true"><svg><use href="#i-ok"/></svg></span>
+              <h3>¡Mensaje listo para despegar!</h3>
+              <p>Gracias por escribirme. Puedes abrir tu correo o WhatsApp con el mensaje ya redactado para conectar de inmediato.</p>
+              <div class="gracias-acciones">
+                <a class="btn btn-rojo btn-sm" id="btn-abrir-correo" href="mailto:camiloadiaz12@gmail.com">Abrir en Correo</a>
+                <a class="btn btn-primario btn-sm" id="btn-abrir-wa" href="https://wa.me/573163004524" target="_blank" rel="noopener">Abrir en WhatsApp</a>
+                <button class="btn btn-secundario btn-sm" type="button" id="otro-mensaje">Nuevo mensaje</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-grid">
+        <div class="pie-marca">
+          <a class="marca-logo" href="#inicio" style="color:#fff">
+            <span class="marca-monograma" style="background:#FDFBF7;color:#111" aria-hidden="true">CD</span>
+            <span>Camilo Andrés Díaz</span>
+          </a>
+          <p>Estudiante de Publicidad y Marketing Digital, apasionado por la creatividad, la comunicación y las nuevas ideas.</p>
+        </div>
+
+        <div>
+          <h3>Navegación</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="#servicios">Diseño para redes sociales</a></li>
+            <li><a href="#servicios">Creación de contenido</a></li>
+            <li><a href="#servicios">Branding</a></li>
+            <li><a href="#servicios">Publicidad digital</a></li>
+            <li><a href="#servicios">Estrategias creativas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contacto directo</h3>
+          <ul>
+            <li><a href="mailto:camiloadiaz12@gmail.com">camiloadiaz12@gmail.com</a></li>
+            <li><a href="https://instagram.com/dondeesta_andres" target="_blank" rel="noopener">Instagram: @dondeesta_andres</a></li>
+            <li><a href="https://wa.me/573163004524" target="_blank" rel="noopener">WhatsApp: 316 300 4524</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pie-firma" aria-hidden="true">CAMILO DÍAZ</div>
+
+      <div class="pie-final">
+        <span>© 2026 Camilo Andrés Díaz · Publicidad y Marketing Digital</span>
+        <span>Creatividad · Comunicación · Nuevas Ideas</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button class="subir" type="button" id="subir" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Toast de confirmación -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Modal Caso de Estudio -->
+  <dialog class="caso-modal" id="caso-modal" aria-labelledby="caso-titulo">
+    <button class="caso-cerrar" type="button" id="caso-cerrar" aria-label="Cerrar caso">✕</button>
+    <div class="caso-top" id="caso-arte"></div>
+    <div class="caso-body">
+      <p class="caso-cat" id="caso-cat"></p>
+      <h3 id="caso-titulo"></h3>
+      <dl class="caso-dl">
+        <div><dt>Rol</dt><dd id="caso-rol"></dd></div>
+        <div><dt>Reto</dt><dd id="caso-reto"></dd></div>
+        <div><dt>Estrategia</dt><dd id="caso-estrategia"></dd></div>
+        <div><dt>Resultado</dt><dd id="caso-resultado"></dd></div>
+      </dl>
+      <a class="btn btn-primario" href="#contacto" id="caso-cta">
+        Quiero un proyecto similar
+        <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+      </a>
+    </div>
+  </dialog>
+
+  <script>
+    (function () {
+      'use strict';
+
+      const $ = (s, ctx = document) => ctx.querySelector(s);
+      const $$ = (s, ctx = document) => Array.from(ctx.querySelectorAll(s));
+      const reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---------- 1. Barra de progreso, Nav y Scroll-Spy ---------- */
+      const navPill = $('#nav-pill');
+      const btnSubir = $('#subir');
+      const navLinks = $$('#nav-links a');
+      const secciones = ['inicio', 'sobre-mi', 'servicios', 'portafolio', 'proceso', 'contacto']
+        .map(id => document.getElementById(id)).filter(Boolean);
+
+      function actualizarScroll() {
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - window.innerHeight;
+        const p = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+        doc.style.setProperty('--scroll', p.toFixed(4));
+        navPill.classList.toggle('elevada', window.scrollY > 24);
+        btnSubir.classList.toggle('mostrar', window.scrollY > 520);
+
+        let actual = 'inicio';
+        secciones.forEach(sec => {
+          if (sec.getBoundingClientRect().top <= 160) actual = sec.id;
+        });
+        navLinks.forEach(a => a.classList.toggle('activo', a.getAttribute('href') === '#' + actual));
+      }
+      window.addEventListener('scroll', actualizarScroll, { passive: true });
+      actualizarScroll();
+      btnSubir.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reducir ? 'auto' : 'smooth' }));
+
+      /* ---------- 2. Menú móvil ---------- */
+      const menuBtn = $('#menu-toggle');
+      const menuMovil = $('#menu-movil');
+      function cerrarMenu() {
+        menuMovil.classList.remove('abierto');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+      menuBtn.addEventListener('click', () => {
+        const abierto = menuMovil.classList.toggle('abierto');
+        menuBtn.setAttribute('aria-expanded', String(abierto));
+      });
+      $$('a', menuMovil).forEach(a => a.addEventListener('click', cerrarMenu));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarMenu(); });
+
+      /* ---------- 3. Rotador de roles en Hero ---------- */
+      const rolEl = $('#rol-rotativo');
+      const roles = ['Creatividad e Ideas', 'Branding & Identidad', 'Campañas Publicitarias', 'Estrategia Digital'];
+      let rIdx = 0;
+      if (rolEl && !reducir) {
+        setInterval(() => {
+          rIdx = (rIdx + 1) % roles.length;
+          rolEl.style.opacity = '0';
+          setTimeout(() => {
+            rolEl.textContent = roles[rIdx];
+            rolEl.style.opacity = '1';
+          }, 220);
+        }, 3000);
+        rolEl.style.transition = 'opacity 0.25s ease';
+      }
+
+      /* ---------- 4. Paralaje sutil en Hero y Spotlight en Servicios ---------- */
+      const hero = $('#inicio');
+      const retratoHero = $('#retrato-hero');
+      if (hero && retratoHero && !reducir && window.matchMedia('(hover: hover)').matches) {
+        hero.addEventListener('pointermove', e => {
+          const r = hero.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          retratoHero.style.setProperty('--px', (x * 2).toFixed(2));
+          retratoHero.style.setProperty('--py', (y * 2).toFixed(2));
+        });
+      }
+
+      $$('.servicio-card').forEach(card => {
+        card.addEventListener('pointermove', e => {
+          const r = card.getBoundingClientRect();
+          card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+          card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        });
+      });
+
+      /* ---------- 5. Reveal en scroll + Contadores animados ---------- */
+      const revelar = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            en.target.classList.add('visible');
+            revelar.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      $$('.rv').forEach(el => revelar.observe(el));
+
+      const animarContadores = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (!en.isIntersecting) return;
+          const el = en.target;
+          const fin = Number(el.dataset.contar || 0);
+          const pre = el.dataset.prefijo || '';
+          const suf = el.dataset.sufijo || '';
+          if (reducir) { el.textContent = pre + fin + suf; return; }
+          const inicio = performance.now();
+          const dur = 1100;
+          function tick(now) {
+            const t = Math.min(1, (now - inicio) / dur);
+            const eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = pre + Math.round(fin * eased) + suf;
+            if (t < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          animarContadores.unobserve(el);
+        });
+      }, { threshold: 0.4 });
+      $$('[data-contar]').forEach(el => animarContadores.observe(el));
+
+      /* ---------- 6. Portafolio dinámico + Filtros + Modal ---------- */
+      const proyectos = [
+        {
+          id: 'aura-cafe',
+          filtro: 'branding',
+          categoria: 'Branding · Identidad de Marca',
+          titulo: 'Origen Café · Identidad Visual',
+          resumen: 'Construcción de universo gráfico, empaques y guía visual para una marca artesanal de café.',
+          metrica: 'Sistema 360°',
+          rol: 'Diseño e identidad de marca',
+          reto: 'Diferenciar una cafetería emergente en un mercado saturado con una identidad cálida y moderna.',
+          estrategia: 'Creación de logotipo tipográfico, paleta tierra-bermellón, empaques coleccionables y tono cercano.',
+          resultado: 'Identidad coherente lista para tienda física, empaques y presencia en Instagram.',
+          servicio: 'Branding',
+          arte: `<svg class="arte-bg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#1C1917"/>
+            <circle cx="320" cy="60" r="110" fill="#DC3226" fill-opacity="0.88"/>
+            <circle cx="95" cy="195" r="95" fill="#C59648" fill-opacity="0.32"/>
+            <rect x="44" y="42" width="160" height="166" rx="18" fill="#F5F0E8"/>
+            <circle cx="124" cy="108" r="34" fill="#111111"/>
+            <circle cx="124" cy="108" r="14" fill="#DC3226"/>
+            <rect x="74" y="160" width="100" height="10" rx="5" fill="#111111"/>
+            <rect x="92" y="178" width="64" height="6" rx="3" fill="#8C857B"/>
+          </svg>`
+        },
+        {
+          id: 'pulso-urbano',
+          filtro: 'campanas',
+          categoria: 'Campaña Publicitaria',
+          titulo: 'Pulso Urbano · Lanzamiento',
+          resumen: 'Concepto creativo multicanal para lanzamiento de colección urbana dirigida a audiencia joven.',
+          metrica: '+210% Alcance',
+          rol: 'Dirección creativa y campaña publicitaria',
+          reto: 'Posicionar un lanzamiento de temporada con presupuesto optimizado y alta recordación visual.',
+          estrategia: 'Campaña teaser en redes + piezas de alto contraste + mensajes directos conectados a la cultura urbana.',
+          resultado: 'Incremento de visibilidad orgánica y comunidad altamente participativa durante la semana de lanzamiento.',
+          servicio: 'Estrategias creativas',
+          arte: `<svg class="arte-bg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#DC3226"/>
+            <path d="M0 190 L400 70 L400 250 L0 250 Z" fill="#111111"/>
+            <circle cx="290" cy="95" r="58" fill="#F5F0E8"/>
+            <path d="M266 95 L314 95 M290 71 L290 119" stroke="#DC3226" stroke-width="10" stroke-linecap="round"/>
+            <rect x="36" y="44" width="136" height="22" rx="11" fill="#111111"/>
+            <rect x="36" y="78" width="100" height="14" rx="7" fill="#F5F0E8" fill-opacity="0.85"/>
+          </svg>`
+        },
+        {
+          id: 'sistema-redes',
+          filtro: 'contenido',
+          categoria: 'Diseño para Redes · Contenido',
+          titulo: 'Kova Studio · Sistema Social',
+          resumen: 'Arquitectura de carruseles educativos, reels dinámicos y parrilla visual consistente.',
+          metrica: '3x Interacción',
+          rol: 'Diseño para redes sociales y creación de contenido',
+          reto: 'Organizar una cuenta con publicaciones dispersas y convertirla en un perfil atractivo y profesional.',
+          estrategia: 'Diseño de 3 pilares de contenido, grillas modulares y guiones breves con ganchos visuales en los primeros 3 segundos.',
+          resultado: 'Feed reconocible al instante y aumento sostenido de guardados y compartidos.',
+          servicio: 'Diseño para redes sociales',
+          arte: `<svg class="arte-bg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#EAE2D5"/>
+            <rect x="38" y="34" width="96" height="148" rx="14" fill="#111111"/>
+            <rect x="152" y="54" width="96" height="148" rx="14" fill="#DC3226"/>
+            <rect x="266" y="34" width="96" height="148" rx="14" fill="#C59648"/>
+            <circle cx="86" cy="90" r="22" fill="#F5F0E8"/>
+            <rect x="172" y="92" width="56" height="12" rx="6" fill="#fff"/>
+            <rect x="172" y="114" width="40" height="8" rx="4" fill="#fff" fill-opacity="0.7"/>
+            <polygon points="304,88 304,124 334,106" fill="#111111"/>
+          </svg>`
+        },
+        {
+          id: 'impulso-digital',
+          filtro: 'marketing',
+          categoria: 'Marketing Digital · Pauta',
+          titulo: 'Norte Fit · Embudo Digital',
+          resumen: 'Estrategia de captación con anuncios segmentados, creatividades A/B y optimización por datos.',
+          metrica: '-38% Costo/Lead',
+          rol: 'Estrategia de marketing digital y publicidad digital',
+          reto: 'Atraer clientes calificados a través de pauta digital reduciendo el costo por conversación.',
+          estrategia: 'Segmentación por intereses locales, testeo de 4 creatividades con copy directo y optimización semanal.',
+          resultado: 'Flujo constante de leads calificados y retorno claro sobre la inversión publicitaria.',
+          servicio: 'Publicidad digital',
+          arte: `<svg class="arte-bg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#141416"/>
+            <path d="M35 205 L115 155 L185 170 L275 95 L360 55" stroke="#C59648" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="115" cy="155" r="8" fill="#F5F0E8"/>
+            <circle cx="185" cy="170" r="8" fill="#F5F0E8"/>
+            <circle cx="275" cy="95" r="10" fill="#DC3226"/>
+            <circle cx="360" cy="55" r="11" fill="#C59648"/>
+            <rect x="44" y="42" width="110" height="44" rx="10" fill="#232327" stroke="#38383E"/>
+            <rect x="58" y="56" width="62" height="8" rx="4" fill="#DC3226"/>
+            <rect x="58" y="70" width="80" height="6" rx="3" fill="#B5AFA5"/>
+          </svg>`
+        },
+        {
+          id: 'reels-marca',
+          filtro: 'contenido',
+          categoria: 'Creación de Contenido',
+          titulo: 'Sabores Locales · Serie Reels',
+          resumen: 'Mini-serie de videos cortos enfocada en historias auténticas detrás del producto.',
+          metrica: '+85K Vistas',
+          rol: 'Guion, narrativa visual y creación de contenido',
+          reto: 'Humanizar la marca para conectar emocionalmente sin sonar a comercial tradicional.',
+          estrategia: 'Formato documental ágil, ritmo dinámico de edición y llamados a la acción conversacionales.',
+          resultado: 'Alto porcentaje de retención y crecimiento orgánico de seguidores locales.',
+          servicio: 'Creación de contenido',
+          arte: `<svg class="arte-bg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#26221E"/>
+            <circle cx="200" cy="125" r="78" fill="#DC3226" fill-opacity="0.22"/>
+            <circle cx="200" cy="125" r="50" fill="#F5F0E8"/>
+            <polygon points="188,103 188,147 224,125" fill="#111111"/>
+            <rect x="34" y="34" width="70" height="20" rx="10" fill="#DC3226"/>
+            <rect x="34" y="196" width="150" height="10" rx="5" fill="#C59648" fill-opacity="0.75"/>
+          </svg>`
+        },
+        {
+          id: 'estrategia-marca',
+          filtro: 'campanas',
+          categoria: 'Estrategia Creativa · Branding',
+          titulo: 'Vértice · Reposicionamiento',
+          resumen: 'Relanzamiento creativo y estrategia de comunicación para conectar con una nueva generación.',
+          metrica: 'Nueva Voz',
+          rol: 'Estrategias creativas y branding',
+          reto: 'Actualizar la percepción de marca sin perder la confianza de sus clientes actuales.',
+          estrategia: 'Manifiesto de marca, actualización visual limpia y campaña de expectativa en medios digitales.',
+          resultado: 'Posicionamiento renovado, coherencia entre canales y mayor recordación de marca.',
+          servicio: 'Estrategias creativas',
+          arte: `<svg class="arte-bg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#111111"/>
+            <polygon points="200,28 338,215 62,215" fill="none" stroke="#F5F0E8" stroke-width="3"/>
+            <polygon points="200,66 302,202 98,202" fill="#DC3226" fill-opacity="0.88"/>
+            <circle cx="200" cy="154" r="24" fill="#F5F0E8"/>
+          </svg>`
+        }
+      ];
+
+      const gridProyectos = $('#proyectos-grid');
+      gridProyectos.innerHTML = proyectos.map((p, idx) => `
+        <li class="proyecto-card rv visible" data-cat="${p.filtro}">
+          <div class="proyecto-arte">
+            ${p.arte}
+            <span class="proyecto-badge">${p.categoria}</span>
+            <span class="proyecto-metrica">${p.metrica}</span>
+          </div>
+          <div class="proyecto-cuerpo">
+            <h3>${p.titulo}</h3>
+            <p>${p.resumen}</p>
+            <button class="proyecto-abrir" type="button" data-idx="${idx}">
+              Ver caso de estudio
+              <svg aria-hidden="true"><use href="#i-flecha"/></svg>
+            </button>
+          </div>
+        </li>
+      `).join('');
+
+      // Filtros de portafolio
+      $$('.filtro-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          $$('.filtro-btn').forEach(b => b.classList.remove('activo'));
+          btn.classList.add('activo');
+          const f = btn.dataset.filtro;
+          $$('.proyecto-card', gridProyectos).forEach(card => {
+            card.hidden = f !== 'todos' && card.dataset.cat !== f;
+          });
+        });
+      });
+
+      // Modal caso de estudio
+      const modal = $('#caso-modal');
+      let proyectoActivo = null;
+      gridProyectos.addEventListener('click', e => {
+        const btn = e.target.closest('.proyecto-abrir');
+        if (!btn) return;
+        const p = proyectos[Number(btn.dataset.idx)];
+        proyectoActivo = p;
+        $('#caso-arte').innerHTML = p.arte;
+        $('#caso-cat').textContent = p.categoria;
+        $('#caso-titulo').textContent = p.titulo;
+        $('#caso-rol').textContent = p.rol;
+        $('#caso-reto').textContent = p.reto;
+        $('#caso-estrategia').textContent = p.estrategia;
+        $('#caso-resultado').textContent = p.resultado;
+        if (typeof modal.showModal === 'function') modal.showModal();
+      });
+      $('#caso-cerrar').addEventListener('click', () => modal.close());
+      modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
+      $('#caso-cta').addEventListener('click', () => {
+        if (proyectoActivo) $('#f-servicio').value = proyectoActivo.servicio;
+        modal.close();
+      });
+
+      /* ---------- 7. Copiar datos y Toast ---------- */
+      const toast = $('#toast');
+      let toastTimer;
+      function mostrarToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add('visible');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('visible'), 2500);
+      }
+
+      $$('[data-copiar]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const valor = btn.dataset.copiar;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(valor).then(() => mostrarToast('Copiado: ' + valor));
+          } else {
+            mostrarToast('Dato: ' + valor);
+          }
+        });
+      });
+
+      /* ---------- 8. Preselección de servicios + Formulario inteligente ---------- */
+      $$('[data-servicio]').forEach(link => {
+        link.addEventListener('click', () => {
+          $('#f-servicio').value = link.dataset.servicio;
+          mostrarToast('Servicio seleccionado: ' + link.dataset.servicio);
+        });
+      });
+
+      const form = $('#formulario');
+      const gracias = $('#gracias');
+
+      function validarFormulario() {
+        let ok = true, primero = null;
+        const reglas = {
+          nombre: v => v.trim().length >= 2,
+          correo: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+          servicio: v => v !== '',
+          mensaje: v => v.trim().length >= 10
+        };
+        Object.keys(reglas).forEach(k => {
+          const input = $('#f-' + k);
+          const campo = input.closest('.campo');
+          const valido = reglas[k](input.value);
+          campo.dataset.error = String(!valido);
+          input.setAttribute('aria-invalid', String(!valido));
+          if (!valido) {
+            ok = false;
+            if (!primero) primero = input;
+          }
+        });
+        if (primero) primero.focus();
+        return ok;
+      }
+
+      $$('input, select, textarea', form).forEach(el => {
+        el.addEventListener('input', () => {
+          el.closest('.campo').dataset.error = 'false';
+          el.setAttribute('aria-invalid', 'false');
+        });
+      });
+
+      function construirEnlaces() {
+        const nombre = $('#f-nombre').value.trim();
+        const correo = $('#f-correo').value.trim();
+        const servicio = $('#f-servicio').value;
+        const mensaje = $('#f-mensaje').value.trim();
+
+        const asunto = encodeURIComponent('Contacto Portafolio · ' + servicio);
+        const cuerpoCorreo = encodeURIComponent(
+          `Hola Camilo,\n\nSoy ${nombre} (${correo}).\nMe interesa: ${servicio}.\n\nMensaje:\n${mensaje}`
+        );
+        const textoWa = encodeURIComponent(
+          `¡Hola Camilo! Soy ${nombre}. Vi tu portafolio y me interesa: *${servicio}*.\n\n${mensaje}\n\nMi correo: ${correo}`
+        );
+        return {
+          mailto: `mailto:camiloadiaz12@gmail.com?subject=${asunto}&body=${cuerpoCorreo}`,
+          wa: `https://wa.me/573163004524?text=${textoWa}`
+        };
+      }
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        if (!validarFormulario()) return;
+        const links = construirEnlaces();
+        $('#btn-abrir-correo').href = links.mailto;
+        $('#btn-abrir-wa').href = links.wa;
+        form.hidden = true;
+        gracias.hidden = false;
+        mostrarToast('¡Perfecto! Elige correo o WhatsApp para enviarlo.');
+      });
+
+      $('#f-whatsapp').addEventListener('click', () => {
+        if (!validarFormulario()) return;
+        const links = construirEnlaces();
+        window.open(links.wa, '_blank', 'noopener');
+      });
+
+      $('#otro-mensaje').addEventListener('click', () => {
+        form.reset();
+        gracias.hidden = true;
+        form.hidden = false;
+        $('#f-nombre').focus();
+      });
+
+      /* ---------- 9. Minijuego Editorial "Atrapa la Idea" ---------- */
+      const lienzo = $('#lienzo');
+      const ctx = lienzo.getContext('2d');
+      const W = lienzo.width, H = lienzo.height;
+      const elPuntos = $('#j-puntos');
+      const elVidas = $('#j-vidas');
+      const elRecord = $('#j-record');
+      const btnJugar = $('#j-jugar');
+      const anuncio = $('#j-anuncio');
+
+      let record = 0;
+      try { record = Number(localStorage.getItem('camilo-record') || 0); } catch (e) { record = 0; }
+      elRecord.textContent = record;
+
+      let estado = 'espera';
+      let jug, items, particulas, puntos, vidas, combo, spawnT, ultimoT, dir = 0, raf = 0;
+      const teclas = {};
+
+      function reiniciarJuego() {
+        jug = { x: W / 2, y: H - 46, r: 28 };
+        items = [];
+        particulas = [];
+        puntos = 0;
+        vidas = 3;
+        combo = 0;
+        spawnT = 0;
+        ultimoT = 0;
+        elPuntos.textContent = '0';
+        elVidas.textContent = '3';
+      }
+      reiniciarJuego();
+
+      function crearParticulas(x, y, color) {
+        for (let i = 0; i < 12; i++) {
+          const ang = (Math.PI * 2 * i) / 12 + Math.random() * 0.4;
+          const vel = 60 + Math.random() * 130;
+          particulas.push({ x, y, vx: Math.cos(ang) * vel, vy: Math.sin(ang) * vel, vida: 0.45, color });
+        }
+      }
+
+      function nuevoItem() {
+        const r = Math.random();
+        const tipo = r < 0.58 ? 'idea' : (r < 0.75 ? 'viral' : 'ruido');
+        items.push({
+          tipo,
+          x: 28 + Math.random() * (W - 56),
+          y: -22,
+          v: 120 + Math.random() * 75 + Math.min(puntos * 2.4, 175),
+          r: tipo === 'viral' ? 14 : 12,
+          giro: Math.random() * Math.PI
+        });
+      }
+
+      function dibujarCaptador(x, y, r) {
+        ctx.save();
+        ctx.fillStyle = '#F5F0E8';
+        ctx.strokeStyle = '#DC3226';
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = '#111111';
+        ctx.font = '800 15px Syne, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('CD', x, y + 1);
+        ctx.restore();
+      }
+
+      function dibujarJuego() {
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = '#111111';
+        ctx.fillRect(0, 0, W, H);
+
+        // Cuadrícula de puntos editorial
+        ctx.fillStyle = 'rgba(245, 240, 232, 0.11)';
+        for (let gx = 20; gx < W; gx += 28) {
+          for (let gy = 20; gy < H; gy += 28) {
+            ctx.fillRect(gx, gy, 2, 2);
+          }
+        }
+
+        // Resplandor inferior cálido
+        const grad = ctx.createRadialGradient(W / 2, H, 10, W / 2, H, 260);
+        grad.addColorStop(0, 'rgba(220, 50, 38, 0.25)');
+        grad.addColorStop(1, 'rgba(220, 50, 38, 0)');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, W, H);
+
+        // Partículas
+        particulas.forEach(p => {
+          ctx.globalAlpha = Math.max(0, p.vida / 0.45);
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 3.2, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+
+        // Ítems
+        items.forEach(it => {
+          ctx.save();
+          ctx.translate(it.x, it.y);
+          ctx.rotate(it.giro);
+          if (it.tipo === 'idea') {
+            ctx.fillStyle = '#DC3226';
+            ctx.beginPath();
+            ctx.arc(0, 0, it.r, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = '#F5F0E8';
+            ctx.beginPath();
+            ctx.arc(-3, -3, 3.2, 0, Math.PI * 2);
+            ctx.fill();
+          } else if (it.tipo === 'viral') {
+            ctx.fillStyle = '#C59648';
+            ctx.beginPath();
+            for (let i = 0; i < 8; i++) {
+              const rad = i % 2 ? it.r * 0.48 : it.r * 1.18;
+              const a = (i * Math.PI) / 4;
+              ctx.lineTo(Math.cos(a) * rad, Math.sin(a) * rad);
+            }
+            ctx.closePath();
+            ctx.fill();
+          } else {
+            ctx.fillStyle = '#333338';
+            ctx.strokeStyle = '#F5F0E8';
+            ctx.lineWidth = 2.2;
+            ctx.fillRect(-it.r, -it.r, it.r * 2, it.r * 2);
+            ctx.beginPath();
+            ctx.moveTo(-5, -5); ctx.lineTo(5, 5);
+            ctx.moveTo(5, -5); ctx.lineTo(-5, 5);
+            ctx.stroke();
+          }
+          ctx.restore();
+        });
+
+        dibujarCaptador(jug.x, jug.y, jug.r);
+
+        if (combo >= 3 && estado === 'jugando') {
+          ctx.fillStyle = '#C59648';
+          ctx.font = '700 13px Plus Jakarta Sans, sans-serif';
+          ctx.textAlign = 'left';
+          ctx.fillText('RACHA x' + combo, 16, 26);
+        }
+
+        if (estado !== 'jugando') {
+          ctx.fillStyle = 'rgba(17, 17, 17, 0.78)';
+          ctx.fillRect(0, 0, W, H);
+          ctx.textAlign = 'center';
+          ctx.fillStyle = '#F5F0E8';
+          ctx.font = '800 30px Syne, sans-serif';
+          const titulo = estado === 'fin' ? 'Fin de la ronda' : (estado === 'pausa' ? 'En pausa' : 'Atrapa la Idea');
+          ctx.fillText(titulo, W / 2, H / 2 - 14);
+          ctx.font = '500 15px Plus Jakarta Sans, sans-serif';
+          ctx.fillStyle = '#C59648';
+          ctx.fillText(estado === 'fin' ? puntos + ' puntos creativos' : 'Pulsa Jugar o toca el lienzo', W / 2, H / 2 + 20);
+        }
+      }
+
+      function bucleJuego(t) {
+        if (estado !== 'jugando') return;
+        const dt = Math.min(0.04, (t - (ultimoT || t)) / 1000);
+        ultimoT = t;
+        spawnT += dt;
+
+        const mov = (teclas.der || dir > 0 ? 1 : 0) - (teclas.izq || dir < 0 ? 1 : 0);
+        jug.x = Math.max(jug.r + 4, Math.min(W - jug.r - 4, jug.x + mov * 380 * dt));
+
+        if (spawnT > 0.68 - Math.min(puntos * 0.005, 0.34)) {
+          spawnT = 0;
+          nuevoItem();
+        }
+
+        items.forEach(it => { it.y += it.v * dt; it.giro += dt * 2.1; });
+        particulas.forEach(p => { p.x += p.vx * dt; p.y += p.vy * dt; p.vida -= dt; });
+        particulas = particulas.filter(p => p.vida > 0);
+
+        items = items.filter(it => {
+          const dx = it.x - jug.x, dy = it.y - jug.y;
+          if (Math.hypot(dx, dy) < it.r + jug.r * 0.88) {
+            if (it.tipo === 'idea') {
+              combo += 1;
+              puntos += 1;
+              crearParticulas(it.x, it.y, '#DC3226');
+            } else if (it.tipo === 'viral') {
+              combo += 1;
+              puntos += 5;
+              crearParticulas(it.x, it.y, '#C59648');
+            } else {
+              combo = 0;
+              vidas -= 1;
+              crearParticulas(it.x, it.y, '#F5F0E8');
+            }
+            elPuntos.textContent = String(puntos);
+            elVidas.textContent = String(Math.max(0, vidas));
+            return false;
+          }
+          if (it.y > H + 24) {
+            if (it.tipo === 'idea') {
+              combo = 0;
+              vidas -= 1;
+              elVidas.textContent = String(Math.max(0, vidas));
+            }
+            return false;
+          }
+          return true;
+        });
+
+        if (vidas <= 0) {
+          estado = 'fin';
+          btnJugar.textContent = 'Jugar otra vez';
+          if (puntos > record) {
+            record = puntos;
+            elRecord.textContent = String(record);
+            try { localStorage.setItem('camilo-record', String(record)); } catch (e) {}
+          }
+          anuncio.textContent = 'Fin del juego. Lograste ' + puntos + ' puntos.';
+          dibujarJuego();
+          return;
+        }
+
+        dibujarJuego();
+        raf = requestAnimationFrame(bucleJuego);
+      }
+
+      function toggleJuego() {
+        if (estado === 'jugando') {
+          estado = 'pausa';
+          btnJugar.textContent = 'Continuar';
+          cancelAnimationFrame(raf);
+          dibujarJuego();
+          return;
+        }
+        if (estado === 'fin' || estado === 'espera') reiniciarJuego();
+        estado = 'jugando';
+        btnJugar.textContent = 'Pausa';
+        ultimoT = 0;
+        raf = requestAnimationFrame(bucleJuego);
+      }
+      btnJugar.addEventListener('click', toggleJuego);
+
+      function sostener(id, val) {
+        const b = $(id);
+        b.addEventListener('pointerdown', e => { e.preventDefault(); dir = val; });
+        ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => {
+          b.addEventListener(ev, () => { if (dir === val) dir = 0; });
+        });
+      }
+      sostener('#j-izq', -1);
+      sostener('#j-der', 1);
+
+      document.addEventListener('keydown', e => {
+        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
+        const k = e.key.toLowerCase();
+        if (k === 'arrowleft' || k === 'a') { teclas.izq = true; if (estado === 'jugando') e.preventDefault(); }
+        if (k === 'arrowright' || k === 'd') { teclas.der = true; if (estado === 'jugando') e.preventDefault(); }
+      });
+      document.addEventListener('keyup', e => {
+        const k = e.key.toLowerCase();
+        if (k === 'arrowleft' || k === 'a') teclas.izq = false;
+        if (k === 'arrowright' || k === 'd') teclas.der = false;
+      });
+
+      lienzo.addEventListener('pointerdown', e => {
+        if (estado !== 'jugando') { toggleJuego(); return; }
+        const r = lienzo.getBoundingClientRect();
+        jug.x = Math.max(jug.r + 4, Math.min(W - jug.r - 4, (e.clientX - r.left) * (W / r.width)));
+      });
+      lienzo.addEventListener('pointermove', e => {
+        if (estado !== 'jugando') return;
+        const r = lienzo.getBoundingClientRect();
+        jug.x = Math.max(jug.r + 4, Math.min(W - jug.r - 4, (e.clientX - r.left) * (W / r.width)));
+      });
+
+      new IntersectionObserver(en => {
+        if (!en[0].isIntersecting && estado === 'jugando') toggleJuego();
+      }, { threshold: 0.1 }).observe(lienzo);
+
+      dibujarJuego();
+    })();
+  </script>
+</body>
+</html>
